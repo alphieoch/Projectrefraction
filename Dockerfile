@@ -11,10 +11,10 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the rest of the application source code
-COPY . .
+COPY ./app .
 
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Command to run the application
-CMD ["node", "app.js"]
+# Command to run the application with bun.js
+CMD ["bun.js", "app.js"]
