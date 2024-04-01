@@ -38,12 +38,16 @@ body, html {
     height: 25vw;
     max-width: 500px;
     max-height: 500px;
-    background-color: rgba(166,156,156,0.4);
+    background-color: rgba(166, 156, 156, 0.4);
     border-radius: 50%;
     position: absolute;
     top: 50%;
     right: 5vw;
     transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 @keyframes spin {
@@ -55,6 +59,31 @@ body, html {
     animation: spin 8s linear infinite;
 }
 
+.inner-circle {
+    width: 15vw;
+    height: 15vw;
+    max-width: 300px;
+    max-height: 300px;
+    background-color: rgba(166, 156, 156, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.inner-circle.drag-over {
+    transform: scale(1.1);
+}
+
+.drag-text {
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 .black-dot {
     width: 1vw;
     height: 1vw;
@@ -63,6 +92,8 @@ body, html {
     background-color: black;
     border-radius: 50%;
     position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -181,4 +212,38 @@ body, html {
 
 #player:hover .ui-slider-handle {
     display: block;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
