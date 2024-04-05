@@ -38,9 +38,68 @@
       </button>
     </div>
   </div>
+  <div class="eq-container">
+    <h3>Equalizer</h3>
+    <div class="eq-sliders">
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="32">
+        <span class="eq-value">0</span>
+        <span class="eq-label">32 Hz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="64">
+        <span class="eq-value">0</span>
+        <span class="eq-label">64 Hz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="125">
+        <span class="eq-value">0</span>
+        <span class="eq-label">125 Hz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="250">
+        <span class="eq-value">0</span>
+        <span class="eq-label">250 Hz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="500">
+        <span class="eq-value">0</span>
+        <span class="eq-label">500 Hz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="1000">
+        <span class="eq-value">0</span>
+        <span class="eq-label">1 kHz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="2000">
+        <span class="eq-value">0</span>
+        <span class="eq-label">2 kHz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="4000">
+        <span class="eq-value">0</span>
+        <span class="eq-label">4 kHz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="8000">
+        <span class="eq-value">0</span>
+        <span class="eq-label">8 kHz</span>
+      </div>
+      <div class="eq-slider-wrapper">
+        <input type="range" min="-10" max="10" value="0" class="eq-slider" data-freq="16000">
+        <span class="eq-value">0</span>
+        <span class="eq-label">16 kHz</span>
+      </div>
+    </div>
+    <div class="eq-presets">
+      <button id="savePreset">Save Preset</button>
+      <button id="loadPreset">Load Preset</button>
+      <button id="clipProtection">Clip Protection</button>
+    </div>
+  </div>
 </div>
 <audio src="" id="audio"></audio>
 <script src="script.js"></script>
 </body>
 </html>
-

@@ -82,3 +82,56 @@ body {
 .btn-play {
   font-size: 36px;
 }
+
+.eq-container {
+  margin-top: 20px;
+}
+
+.eq-sliders {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.eq-slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eq-slider {
+  width: 100%;
+  margin: 0 5px;
+}
+
+.eq-value {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.eq-label {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.eq-presets {
+  display: flex;
+  justify-content: center;
+}
+
+.eq-presets button {
+  margin: 0 5px;
+}
+
+#clipProtection {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#clipProtection.active {
+  background-color: #ff0000;
+}

@@ -9,6 +9,16 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 const currTime = document.getElementById('currTime');
 const durTime = document.getElementById('durTime');
+const eqSliders = document.querySelectorAll('.eq-slider');
+const eqValues = document.querySelectorAll('.eq-value');
+const savePresetBtn = document.getElementById('savePreset');
+const loadPresetBtn = document.getElementById('loadPreset');
+const clipProtectionBtn = document.getElementById('clipProtection');
+
+let audioContext;
+let source;
+let filters = [];
+let clipProtection = false;
 
 // Track info
 const tracks = [
@@ -113,6 +123,83 @@ function updateCurrentTime() {
 	currTime.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
+// EQ functionality
+function applyEQ() {
+	if (!audioContext) {
+		audioContext = new AudioContext();
+		source = audioContext.createMediaElementSource(audio);
+	}
+
+	if (filters.length > 0) {
+		filters.forEach(filter => filter.disconnect());
+		filters = [];
+	}
+
+	eqSliders.forEach((slider, index) => {
+		const filter = audioContext.createBiquadFilter();
+		const frequency = parseFloat(slider.dataset.freq);
+
+		if (frequency < 100) {
+			filter.type = 'lowshelf';
+		} else if (frequency > 5000) {
+			filter.type = 'highshelf';
+		} else {
+			filter.type = 'peaking';
+		}
+
+		filter.frequency.value = frequency;
+		filter.Q.value = 1;
+
+		if (clipProtection) {
+			const maxGain = 12; // Maximum allowed gain in decibels
+			const gainValue = parseFloat(slider.value);
+			filter.gain.value = Math.min(gainValue, maxGain);
+		} else {
+			filter.gain.value = slider.value;
+		}
+
+		filters.push(filter);
+
+		if (index === 0) {
+			source.disconnect();
+			source.connect(filter);
+		} else {
+			filters[index - 1].connect(filter);
+		}
+
+		if (index === eqSliders.length - 1) {
+			filter.connect(audioContext.destination);
+		}
+	});
+}
+
+eqSliders.forEach((slider, index) => {
+	slider.addEventListener('input', () => {
+		eqValues[index].textContent = slider.value;
+		applyEQ();
+	});
+});
+
+// Save and load presets
+function savePreset() {
+	const preset = {};
+	eqSliders.forEach(slider => {
+		preset[slider.dataset.freq] = slider.value;
+	});
+	localStorage.setItem('eqPreset', JSON.stringify(preset));
+}
+
+function loadPreset() {
+	const preset = JSON.parse(localStorage.getItem('eqPreset'));
+	if (preset) {
+		eqSliders.forEach((slider, index) => {
+			slider.value = preset[slider.dataset.freq] || 0;
+			eqValues[index].textContent = slider.value;
+		});
+		applyEQ();
+	}
+}
+
 // Event listeners
 playBtn.addEventListener('click', () => {
 	const isPlaying = musicContainer.classList.contains('play');
@@ -126,3 +213,15 @@ playBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', prevTrack);
 nextBtn.addEventListener('click', nextTrack);
+audio.addEventListener('timeupdate', updateProgress);
+progressContainer.addEventListener('click', setProgress);
+audio.addEventListener('loadedmetadata', updateDuration);
+audio.addEventListener('timeupdate', updateCurrentTime);
+savePresetBtn.addEventListener('click', savePreset);
+loadPresetBtn.addEventListener('click', loadPreset);
+
+clipProtectionBtn.addEventListener('click', () => {
+	clipProtection = !clipProtection;
+	clipProtectionBtn.classList.toggle('active', clipProtection);
+	applyEQ();
+});
