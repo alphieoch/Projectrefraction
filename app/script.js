@@ -14,11 +14,12 @@ const eqValues = document.querySelectorAll('.eq-value');
 const savePresetBtn = document.getElementById('savePreset');
 const loadPresetBtn = document.getElementById('loadPreset');
 const clipProtectionBtn = document.getElementById('clipProtection');
+const balanceSlider = document.getElementById('balanceSlider');
 
 let audioContext;
 let source;
 let filters = [];
-let clipProtection = false;
+let clipProtection = true;
 
 // Track info
 const tracks = [
@@ -131,46 +132,48 @@ function applyEQ() {
 	}
 
 	if (filters.length > 0) {
+		source.disconnect();
 		filters.forEach(filter => filter.disconnect());
 		filters = [];
 	}
 
-	eqSliders.forEach((slider, index) => {
-		const filter = audioContext.createBiquadFilter();
-		const frequency = parseFloat(slider.dataset.freq);
+	if (clipProtection) {
+		eqSliders.forEach((slider, index) => {
+			const filter = audioContext.createBiquadFilter();
+			const frequency = parseFloat(slider.dataset.freq);
 
-		if (frequency < 100) {
-			filter.type = 'lowshelf';
-		} else if (frequency > 5000) {
-			filter.type = 'highshelf';
-		} else {
-			filter.type = 'peaking';
-		}
+			if (frequency < 100) {
+				filter.type = 'lowshelf';
+			} else if (frequency > 5000) {
+				filter.type = 'highshelf';
+			} else {
+				filter.type = 'peaking';
+			}
 
-		filter.frequency.value = frequency;
-		filter.Q.value = 1;
+			filter.frequency.value = frequency;
+			filter.Q.value = 1;
 
-		if (clipProtection) {
 			const maxGain = 12; // Maximum allowed gain in decibels
 			const gainValue = parseFloat(slider.value);
 			filter.gain.value = Math.min(gainValue, maxGain);
-		} else {
-			filter.gain.value = slider.value;
-		}
 
-		filters.push(filter);
+			filters.push(filter);
 
-		if (index === 0) {
-			source.disconnect();
-			source.connect(filter);
-		} else {
-			filters[index - 1].connect(filter);
-		}
+			if (index === 0) {
+				source.connect(filter);
+			} else {
+				filters[index - 1].connect(filter);
+			}
 
-		if (index === eqSliders.length - 1) {
-			filter.connect(audioContext.destination);
-		}
-	});
+			if (index === eqSliders.length - 1) {
+				filter.connect(audioContext.destination);
+			}
+		});
+	} else {
+		source.connect(audioContext.destination);
+	}
+
+	setBalance();
 }
 
 eqSliders.forEach((slider, index) => {
@@ -200,6 +203,27 @@ function loadPreset() {
 	}
 }
 
+function setBalance() {
+	if (audioContext && source) {
+		const balance = parseFloat(balanceSlider.value);
+		const gainL = audioContext.createGain();
+		const gainR = audioContext.createGain();
+		const merger = audioContext.createChannelMerger(2);
+
+		source.disconnect();
+		source.connect(gainL);
+		source.connect(gainR);
+
+		gainL.connect(merger, 0, 0);
+		gainR.connect(merger, 0, 1);
+
+		gainL.gain.value = balance < 0 ? 1 + balance : 1;
+		gainR.gain.value = balance > 0 ? 1 - balance : 1;
+
+		merger.connect(audioContext.destination);
+	}
+}
+
 // Event listeners
 playBtn.addEventListener('click', () => {
 	const isPlaying = musicContainer.classList.contains('play');
@@ -221,7 +245,24 @@ savePresetBtn.addEventListener('click', savePreset);
 loadPresetBtn.addEventListener('click', loadPreset);
 
 clipProtectionBtn.addEventListener('click', () => {
+	if (clipProtection) {
+		const confirmDisable = confirm('Disabling clip protection may result in loud audio levels that can potentially cause ear damage, especially when using headphones. Do you want to proceed?');
+		if (!confirmDisable) {
+			return;
+		}
+	}
+
 	clipProtection = !clipProtection;
-	clipProtectionBtn.classList.toggle('active', clipProtection);
-	applyEQ();
+	clipProtectionBtn.classList.toggle('active', !clipProtection);
+
+	// Reconnect the audio nodes
+	if (audioContext && source) {
+		source.disconnect();
+		applyEQ();
+	}
 });
+
+balanceSlider.addEventListener('input', setBalance);
+
+// Apply default EQ settings
+applyEQ();

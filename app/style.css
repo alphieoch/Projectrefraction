@@ -83,6 +83,16 @@ body {
   font-size: 36px;
 }
 
+.balance-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.balance-container label {
+  margin-right: 10px;
+}
+
 .eq-container {
   margin-top: 20px;
 }
