@@ -19,6 +19,7 @@ const balanceSlider = document.getElementById('balanceSlider');
 let audioContext;
 let source;
 let filters = [];
+let eqNode;
 let clipProtection = true;
 
 // Track info
@@ -124,60 +125,79 @@ function updateCurrentTime() {
 	currTime.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
+// Initialize audio context
+function initAudioContext() {
+	if (window.AudioContext || window.webkitAudioContext) {
+		if (!audioContext) {
+			audioContext = new (window.AudioContext || window.webkitAudioContext)();
+			source = audioContext.createMediaElementSource(audio);
+			eqNode = audioContext.createGain();
+			connectFilters();
+			setBalance();
+		}
+	} else {
+		console.log('Web Audio API is not supported');
+		// Fallback or error handling
+	}
+}
+
+// Create filters
+function createFilters() {
+	filters = [];
+	eqSliders.forEach((slider, index) => {
+		const filter = audioContext.createBiquadFilter();
+		const frequency = parseFloat(slider.dataset.freq);
+
+		if (frequency < 100) {
+			filter.type = 'lowshelf';
+		} else if (frequency > 5000) {
+			filter.type = 'highshelf';
+		} else {
+			filter.type = 'peaking';
+		}
+
+		filter.frequency.value = frequency;
+		filter.Q.value = 1;
+		filter.gain.value = 0;
+		filters.push(filter);
+	});
+}
+
+// Connect filters
+function connectFilters() {
+	createFilters();
+	source.connect(filters[0]);
+
+	for (let i = 0; i < filters.length - 1; i++) {
+		filters[i].connect(filters[i + 1]);
+	}
+
+	filters[filters.length - 1].connect(eqNode);
+}
+
+// Update filter gains
+function updateFilterGains() {
+	eqSliders.forEach((slider, index) => {
+		const gainValue = parseFloat(slider.value);
+		const maxGain = 12; // Maximum allowed gain in decibels
+		filters[index].gain.setValueAtTime(Math.min(gainValue, maxGain), audioContext.currentTime);
+	});
+}
+
 // EQ functionality
 function applyEQ() {
+	console.log('Applying EQ');
+
 	if (!audioContext) {
-		audioContext = new AudioContext();
-		source = audioContext.createMediaElementSource(audio);
+		return;
 	}
 
-	if (filters.length > 0) {
-		source.disconnect();
-		filters.forEach(filter => filter.disconnect());
-		filters = [];
-	}
-
-	if (clipProtection) {
-		eqSliders.forEach((slider, index) => {
-			const filter = audioContext.createBiquadFilter();
-			const frequency = parseFloat(slider.dataset.freq);
-
-			if (frequency < 100) {
-				filter.type = 'lowshelf';
-			} else if (frequency > 5000) {
-				filter.type = 'highshelf';
-			} else {
-				filter.type = 'peaking';
-			}
-
-			filter.frequency.value = frequency;
-			filter.Q.value = 1;
-
-			const maxGain = 12; // Maximum allowed gain in decibels
-			const gainValue = parseFloat(slider.value);
-			filter.gain.value = Math.min(gainValue, maxGain);
-
-			filters.push(filter);
-
-			if (index === 0) {
-				source.connect(filter);
-			} else {
-				filters[index - 1].connect(filter);
-			}
-
-			if (index === eqSliders.length - 1) {
-				filter.connect(audioContext.destination);
-			}
-		});
-	} else {
-		source.connect(audioContext.destination);
-	}
-
-	setBalance();
+	updateFilterGains();
 }
 
 eqSliders.forEach((slider, index) => {
 	slider.addEventListener('input', () => {
+		console.log('EQ slider changed');
 		eqValues[index].textContent = slider.value;
 		applyEQ();
 	});
@@ -210,9 +230,9 @@ function setBalance() {
 		const gainR = audioContext.createGain();
 		const merger = audioContext.createChannelMerger(2);
 
-		source.disconnect();
-		source.connect(gainL);
-		source.connect(gainR);
+		eqNode.disconnect();
+		eqNode.connect(gainL);
+		eqNode.connect(gainR);
 
 		gainL.connect(merger, 0, 0);
 		gainR.connect(merger, 0, 1);
@@ -241,6 +261,7 @@ audio.addEventListener('timeupdate', updateProgress);
 progressContainer.addEventListener('click', setProgress);
 audio.addEventListener('loadedmetadata', updateDuration);
 audio.addEventListener('timeupdate', updateCurrentTime);
+audio.addEventListener('canplaythrough', initAudioContext);
 savePresetBtn.addEventListener('click', savePreset);
 loadPresetBtn.addEventListener('click', loadPreset);
 
@@ -253,16 +274,4 @@ clipProtectionBtn.addEventListener('click', () => {
 	}
 
 	clipProtection = !clipProtection;
-	clipProtectionBtn.classList.toggle('active', !clipProtection);
-
-	// Reconnect the audio nodes
-	if (audioContext && source) {
-		source.disconnect();
-		applyEQ();
-	}
-});
-
-balanceSlider.addEventListener('input', setBalance);
-
-// Apply default EQ settings
-applyEQ();
+	clipProtectionBtn.classList.
