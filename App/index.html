@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixabay Background Video</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+<div id="background-container">
+  <video id="background-video" autoplay loop muted></video>
+  <div id="artist-name"></div>
+</div>
+
+<div id="music-player">
+  <div id="track-info">
+    <img id="album-art" src="https://via.placeholder.com/60" alt="Album Art">
+    <div id="track-details">
+      <span id="track-title">Track Title</span><br>
+      <span id="track-artist">Artist Name</span>
+    </div>
+  </div>
+  <div id="controls">
+    <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+    <button id="playpause-btn"><i class="fas fa-play"></i></button>
+    <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+  </div>
+  <div id="right-controls">
+    <div id="progress-bar">
+      <div id="current-time">00:00</div>
+      <input type="range" id="seek-slider" min="0" max="100" value="0">
+      <div id="duration">00:00</div>
+    </div>
+    <div id="volume-control">
+      <i class="material-icons">volume_up</i>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
