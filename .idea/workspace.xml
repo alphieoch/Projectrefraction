@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53a8e431-e9e6-41fa-9bbd-f7c5a4bf8c76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/App/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/script.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="unstable-branch-need-work" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2eT5L7LP70xlOWnSNFcg1gNxcq4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.app.js.executor": "Run",
+    "Node.js.script.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "From-scratch",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/alphie/Documents/University computing/Final year computing/Project in computing/Prototypes./projectrefraction",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="New-Ui" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53a8e431-e9e6-41fa-9bbd-f7c5a4bf8c76" name="Changes" comment="" />
+      <created>1711915669096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711915669096</updated>
+      <workItem from="1711915670136" duration="35837000" />
+      <workItem from="1712002979803" duration="3576000" />
+      <workItem from="1712010839323" duration="5307000" />
+      <workItem from="1712350582242" duration="18115000" />
+      <workItem from="1712605601594" duration="5967000" />
+      <workItem from="1712874684756" duration="728000" />
+      <workItem from="1712958741248" duration="9670000" />
+    </task>
+    <task id="LOCAL-00001" summary="Basic UI">
+      <option name="closed" value="true" />
+      <created>1711927194252</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711927194252</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ui updated with new design.">
+      <option name="closed" value="true" />
+      <created>1711934951913</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934951913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Need correction to fix it but it's on it's way at this point.">
+      <option name="closed" value="true" />
+      <created>1711941282263</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711941282263</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Need correction to fix it but it's on it's way at this point.">
+      <option name="closed" value="true" />
+      <created>1712006558420</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712006558420</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new UI complete">
+      <option name="closed" value="true" />
+      <created>1712018169358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712018169358</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new UI complete">
+      <option name="closed" value="true" />
+      <created>1712357304000</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712357304000</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Audio making progress have added  the use of L &amp; R channels next implimentation  will be the additon of fixing the current audio bug. also maybe include an pitch contropl and tempo. we will see. its 1am i need sleep">
+      <option name="closed" value="true" />
+      <created>1712362069245</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712362069245</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed the audio now it has the equalizer working and providing audio to the user correctly. fixing clip protection next.">
+      <option name="closed" value="true" />
+      <created>1712514810037</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712514810037</updated>
+    </task>
+    <task id="LOCAL-00009" summary="next week issue is fixing reverb in the application">
+      <option name="closed" value="true" />
+      <created>1712519963470</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712519963470</updated>
+    </task>
+    <task id="LOCAL-00010" summary="next week issue is fixing reverb in the application">
+      <option name="closed" value="true" />
+      <created>1712967206296</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712967206296</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="LONG_EDGES_VISIBLE" value="true" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Basic UI" />
+    <MESSAGE value="Ui updated with new design." />
+    <MESSAGE value="Need correction to fix it but it's on it's way at this point." />
+    <MESSAGE value="new UI complete" />
+    <MESSAGE value="Audio making progress have added  the use of L &amp; R channels next implimentation  will be the additon of fixing the current audio bug. also maybe include an pitch contropl and tempo. we will see. its 1am i need sleep" />
+    <MESSAGE value="Fixed the audio now it has the equalizer working and providing audio to the user correctly. fixing clip protection next." />
+    <MESSAGE value="next week issue is fixing reverb in the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="next week issue is fixing reverb in the application" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
