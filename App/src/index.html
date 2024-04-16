@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player with Background Video</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="background-container">
+  <!-- Background video will be added dynamically -->
+</div>
+
+<div class="top-right-box">
+  <!-- Add your content for the top right box here -->
+</div>
+
+<div class="playback-bar">
+  <div class="track-info">
+    <div class="album-art"></div>
+    <div class="track-details">
+      <span class="track-name" id="trackName">Track Name</span>
+      <span class="artist-name">Artist Name</span>
+    </div>
+  </div>
+  <div class="progress-bar">
+    <div class="time-info">
+      <span class="current-time">0:00</span>
+      <span class="total-time">0:00</span>
+    </div>
+    <canvas id="progress"></canvas>
+    <div class="progress-circle"></div>
+  </div>
+  <div class="controls">
+    <button class="prev-btn"><i class="fas fa-step-backward"></i></button>
+    <button class="play-pause-btn">
+      <i class="fas fa-play"></i>
+      <i class="fas fa-pause" style="display: none;"></i>
+    </button>
+    <button class="next-btn"><i class="fas fa-step-forward"></i></button>
+  </div>
+  <div class="volume-control">
+    <i class="fas fa-volume-down"></i>
+    <input type="range" class="volume-slider" min="0" max="100" value="50">
+    <i class="fas fa-volume-up"></i>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<script src="api.js"></script>
+<script src="main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
