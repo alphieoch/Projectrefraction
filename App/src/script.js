@@ -270,3 +270,57 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', det
 
 // Load the initial audio file
 loadAudio('Childish Gambino - Human Sacrifice (Studio Version Leak).mp3');
+
+// Swipe functionality for settings container
+const settingsContainer = document.querySelector('.settings-container');
+const swipeDots = document.querySelectorAll('.dot');
+let currentSetting = 0; // Set initial setting to 0 (equalizer)
+
+settingsContainer.addEventListener('touchstart', handleTouchStart, false);
+settingsContainer.addEventListener('touchmove', handleTouchMove, false);
+
+swipeDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSetting = index;
+        settingsContainer.style.transform = `translateX(-${currentSetting * 33.33}%)`;
+        updateSwipeDots();
+    });
+});
+
+let xDown = null;
+
+function handleTouchStart(evt) {
+    xDown = evt.touches[0].clientX;
+}
+
+function handleTouchMove(evt) {
+    if (!xDown) {
+        return;
+    }
+
+    const xUp = evt.touches[0].clientX;
+    const xDiff = xDown - xUp;
+
+    if (xDiff > 0) {
+        // Swiped left
+        currentSetting = (currentSetting + 1) % 3;
+    } else {
+        // Swiped right
+        currentSetting = (currentSetting - 1 + 3) % 3;
+    }
+
+    settingsContainer.style.transform = `translateX(-${currentSetting * 33.33}%)`;
+    updateSwipeDots();
+
+    xDown = null;
+}
+
+function updateSwipeDots() {
+    swipeDots.forEach((dot, index) => {
+        if (index === currentSetting) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
