@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53a8e431-e9e6-41fa-9bbd-f7c5a4bf8c76" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/.idea/App.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/Childish Gambino - Human Sacrifice (Studio Version Leak).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/adele-skyfall-made-with-Voicemod.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/output/example-music-player.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/output/html-css.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/styles.css" beforeDir="false" />
+    <list default="true" id="53a8e431-e9e6-41fa-9bbd-f7c5a4bf8c76" name="Changes" comment="final branch for write up">
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +33,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="unstable-branch-need-work" />
+        <entry key="$PROJECT_DIR$" value="From-scratch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,34 +54,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.script.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;From-scratch&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alphie/Documents/GitHub/Projectrefraction&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.app.js.executor": "Run",
+    "Node.js.script.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "final-branch",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/alphie/Documents/GitHub/Projectrefraction",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="New-Ui" />
+      <force-push-target remote-path="origin" branch="final-branch" />
     </force-push-targets>
   </component>
   <component name="RecentsManager">
@@ -123,7 +110,7 @@
       <workItem from="1713735977338" duration="34000" />
       <workItem from="1713736270378" duration="46000" />
       <workItem from="1713736563778" duration="53000" />
-      <workItem from="1713745230796" duration="1258000" />
+      <workItem from="1713745230796" duration="1548000" />
     </task>
     <task id="LOCAL-00001" summary="Basic UI">
       <option name="closed" value="true" />
@@ -205,7 +192,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712967206296</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="final branch for write up">
+      <option name="closed" value="true" />
+      <created>1713770333673</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770333673</updated>
+    </task>
+    <task id="LOCAL-00012" summary="final branch for write up">
+      <option name="closed" value="true" />
+      <created>1713770430332</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770430332</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +290,8 @@
     <MESSAGE value="Audio making progress have added  the use of L &amp; R channels next implimentation  will be the additon of fixing the current audio bug. also maybe include an pitch contropl and tempo. we will see. its 1am i need sleep" />
     <MESSAGE value="Fixed the audio now it has the equalizer working and providing audio to the user correctly. fixing clip protection next." />
     <MESSAGE value="next week issue is fixing reverb in the application" />
-    <option name="LAST_COMMIT_MESSAGE" value="next week issue is fixing reverb in the application" />
+    <MESSAGE value="final branch for write up" />
+    <option name="LAST_COMMIT_MESSAGE" value="final branch for write up" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
