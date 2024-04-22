@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53a8e431-e9e6-41fa-9bbd-f7c5a4bf8c76" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/App/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/.idea/App.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Childish Gambino - Human Sacrifice (Studio Version Leak).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/adele-skyfall-made-with-Voicemod.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/output/example-music-player.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/output/html-css.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/styles.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,31 +68,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Node.js.app.js.executor": "Run",
-    "Node.js.script.js.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "From-scratch",
-    "go.import.settings.migrated": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/alphie/Documents/University computing/Final year computing/Project in computing/Prototypes./projectrefraction",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.script.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;From-scratch&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alphie/Documents/GitHub/Projectrefraction&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="New-Ui" />
@@ -106,6 +119,11 @@
       <workItem from="1712605601594" duration="5967000" />
       <workItem from="1712874684756" duration="728000" />
       <workItem from="1712958741248" duration="9670000" />
+      <workItem from="1713735605877" duration="253000" />
+      <workItem from="1713735977338" duration="34000" />
+      <workItem from="1713736270378" duration="46000" />
+      <workItem from="1713736563778" duration="53000" />
+      <workItem from="1713745230796" duration="1258000" />
     </task>
     <task id="LOCAL-00001" summary="Basic UI">
       <option name="closed" value="true" />
@@ -235,6 +253,13 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="63" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="63" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="63" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="user">
