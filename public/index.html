@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player with Background Video</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="background-container">
+    <!-- Background video will be added dynamically -->
+</div>
+
+<div class="top-right-box">
+    <div class="menu menu-1 active">
+        <div class="eq-title">Equaliser</div>
+        <div class="equalizer-container">
+            <!-- Equalizer bars will be added dynamically -->
+        </div>
+        <div class="eq-controls">
+            <div class="eq-sliders">
+                <div class="eq-slider-container">
+                    <span class="eq-label">60 Hz</span>
+                    <input type="range" min="-24" max="24" value="0" class="eq-slider" data-frequency="60">
+                </div>
+                <div class="eq-slider-container">
+                    <span class="eq-label">170 Hz</span>
+                    <input type="range" min="-24" max="24" value="0" class="eq-slider" data-frequency="170">
+                </div>
+                <div class="eq-slider-container">
+                    <span class="eq-label">350 Hz</span>
+                    <input type="range" min="-24" max="24" value="0" class="eq-slider" data-frequency="350">
+                </div>
+                <div class="eq-slider-container">
+                    <span class="eq-label">1000 Hz</span>
+                    <input type="range" min="-24" max="24" value="0" class="eq-slider" data-frequency="1000">
+                </div>
+                <div class="eq-slider-container">
+                    <span class="eq-label">3000 Hz</span>
+                    <input type="range" min="-24" max="24" value="0" class="eq-slider" data-frequency="3000">
+                </div>
+                <div class="eq-slider-container">
+                    <span class="eq-label">6000 Hz</span>
+                    <input type="range" min="-24" max="24" value="0" class="eq-slider" data-frequency="6000">
+                </div>
+            </div>
+            <div class="eq-buttons">
+                <button class="eq-save-btn">Save</button>
+                <button class="eq-clear-btn">Clear</button>
+            </div>
+        </div>
+        <div class="saved-settings-box">
+            <div class="saved-settings-title">Saved Settings</div>
+            <div class="saved-settings-list">
+                <!-- Saved settings will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="menu menu-2">
+        <div class="menu-options">
+            <div class="option">
+                <i class="fas fa-music"></i>
+                <span>Track</span>
+            </div>
+            <div class="option">
+                <i class="fas fa-microphone"></i>
+                <span>Vocals</span>
+            </div>
+            <div class="option">
+                <i class="fas fa-drum"></i>
+                <span>Instrumental</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu menu-3">
+        <h2>Menu Three</h2>
+        <!-- Add your content for menu three here -->
+        <p>This is the content for menu three.</p>
+    </div>
+
+    <div class="nav-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+
+<div class="playback-bar">
+    <div class="track-info">
+        <div class="album-art"></div>
+        <div class="track-details">
+            <span class="track-name" id="trackName">Track Name</span>
+            <span class="artist-name">Artist Name</span>
+        </div>
+    </div>
+    <div class="progress-bar">
+        <div class="time-info">
+            <span class="current-time">0:00</span>
+            <span class="total-time">0:00</span>
+        </div>
+        <canvas id="progress"></canvas>
+        <div class="progress-circle"></div>
+    </div>
+    <div class="controls">
+        <button class="prev-btn"><i class="fas fa-step-backward"></i></button>
+        <button class="play-pause-btn">
+            <i class="fas fa-play"></i>
+            <i class="fas fa-pause" style="display: none;"></i>
+        </button>
+        <button class="next-btn"><i class="fas fa-step-forward"></i></button>
+    </div>
+    <div class="volume-control">
+        <i class="fas fa-volume-down"></i>
+        <input type="range" class="volume-slider" min="0" max="100" value="50">
+        <i class="fas fa-volume-up"></i>
+    </div>
+</div>
+
+<div id="eq-save-popup" class="popup">
+    <div class="popup-content">
+        <h2>Save Equalizer Settings</h2>
+        <label for="eq-name">Setting Name:</label>
+        <input type="text" id="eq-name" placeholder="Enter a name for the setting">
+        <label for="user-name">Your Name:</label>
+        <input type="text" id="user-name" placeholder="Enter your name">
+        <label for="track-info">Track Information:</label>
+        <input type="text" id="track-info" placeholder="Enter track information" readonly>
+        <button id="eq-save-confirm">Save</button>
+        <button id="eq-save-cancel">Cancel</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<script src="api.js"></script>
+<script src="main.js"></script>
+<script src="script.js"></script>
+</body>
+</html> 
